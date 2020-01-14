@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <div class="form1" *ngIf="loggin === false">
+      <h2>Loggin</h2>
+      <form>
+
+        <div class="form_box">
+          Username
+          <input class="form_input" type="text" name="username" placeholder="Username" [(ngModel)]="username">
+        </div>
+
+        <div class="form_box">
+          Password
+          <input class="form_input" type="password" name="password" placeholder="Password" [(ngModel)]="password"/>
+        </div>
+
+      </form>
+
+      <button class="btn" (click)="clickedButton()">Log in</button>
+
+    </div>
+    <div class="logged-in" *ngIf="loggin === true">Sucesfully logged in!</div>
+  </body>
+</html>
